@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#1c0900"/>
+      <stop offset="100%" stop-color="#060200"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Badge body -->
+  <rect width="100" height="100" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="98" height="98" rx="17" fill="none" stroke="#3d1f00" stroke-width="1.5"/>
+
+  <!-- Clip strip at top (badge clip) -->
+  <rect x="38" y="0" width="24" height="6" rx="3" fill="#2a1200"/>
+
+  <!-- Unlit LED grid dots (8 cols × 11 rows) -->
+  <!-- col centers: 11.5 22.5 33.5 44.5 55.5 66.5 77.5 88.5 -->
+  <!-- row centers: 10 18 26 34 42 50 58 66 74 82 90 -->
+  <g fill="#1e0b00" opacity="0.9">
+    <!-- row 0 -->
+    <circle cx="11.5" cy="10" r="3.2"/><circle cx="22.5" cy="10" r="3.2"/><circle cx="33.5" cy="10" r="3.2"/><circle cx="44.5" cy="10" r="3.2"/><circle cx="55.5" cy="10" r="3.2"/><circle cx="66.5" cy="10" r="3.2"/><circle cx="77.5" cy="10" r="3.2"/><circle cx="88.5" cy="10" r="3.2"/>
+    <!-- row 1 -->
+    <circle cx="11.5" cy="18" r="3.2"/><circle cx="22.5" cy="18" r="3.2"/><circle cx="33.5" cy="18" r="3.2"/><circle cx="44.5" cy="18" r="3.2"/><circle cx="55.5" cy="18" r="3.2"/><circle cx="66.5" cy="18" r="3.2"/><circle cx="77.5" cy="18" r="3.2"/><circle cx="88.5" cy="18" r="3.2"/>
+    <!-- row 2 - unlit: cols 0, 3, 6, 7 -->
+    <circle cx="11.5" cy="26" r="3.2"/><circle cx="44.5" cy="26" r="3.2"/><circle cx="77.5" cy="26" r="3.2"/><circle cx="88.5" cy="26" r="3.2"/>
+    <!-- row 3 - unlit: col 7 -->
+    <circle cx="88.5" cy="34" r="3.2"/>
+    <!-- row 4 - unlit: col 7 -->
+    <circle cx="88.5" cy="42" r="3.2"/>
+    <!-- row 5 - unlit: col 7 -->
+    <circle cx="88.5" cy="50" r="3.2"/>
+    <!-- row 6 - unlit: cols 0, 6, 7 -->
+    <circle cx="11.5" cy="58" r="3.2"/><circle cx="77.5" cy="58" r="3.2"/><circle cx="88.5" cy="58" r="3.2"/>
+    <!-- row 7 - unlit: cols 0, 1, 5, 6, 7 -->
+    <circle cx="11.5" cy="66" r="3.2"/><circle cx="22.5" cy="66" r="3.2"/><circle cx="66.5" cy="66" r="3.2"/><circle cx="77.5" cy="66" r="3.2"/><circle cx="88.5" cy="66" r="3.2"/>
+    <!-- row 8 - unlit: cols 0,1,2, 4,5,6,7 -->
+    <circle cx="11.5" cy="74" r="3.2"/><circle cx="22.5" cy="74" r="3.2"/><circle cx="33.5" cy="74" r="3.2"/><circle cx="55.5" cy="74" r="3.2"/><circle cx="66.5" cy="74" r="3.2"/><circle cx="77.5" cy="74" r="3.2"/><circle cx="88.5" cy="74" r="3.2"/>
+    <!-- row 9 -->
+    <circle cx="11.5" cy="82" r="3.2"/><circle cx="22.5" cy="82" r="3.2"/><circle cx="33.5" cy="82" r="3.2"/><circle cx="44.5" cy="82" r="3.2"/><circle cx="55.5" cy="82" r="3.2"/><circle cx="66.5" cy="82" r="3.2"/><circle cx="77.5" cy="82" r="3.2"/><circle cx="88.5" cy="82" r="3.2"/>
+    <!-- row 10 -->
+    <circle cx="11.5" cy="90" r="3.2"/><circle cx="22.5" cy="90" r="3.2"/><circle cx="33.5" cy="90" r="3.2"/><circle cx="44.5" cy="90" r="3.2"/><circle cx="55.5" cy="90" r="3.2"/><circle cx="66.5" cy="90" r="3.2"/><circle cx="77.5" cy="90" r="3.2"/><circle cx="88.5" cy="90" r="3.2"/>
+  </g>
+
+  <!-- Lit LEDs — HEART pattern — bright amber with glow -->
+  <g filter="url(#glow)">
+    <!-- outer glow layer -->
+    <g fill="#ff7700" opacity="0.4">
+      <circle cx="22.5" cy="26" r="5"/><circle cx="33.5" cy="26" r="5"/><circle cx="55.5" cy="26" r="5"/><circle cx="66.5" cy="26" r="5"/>
+      <circle cx="11.5" cy="34" r="5"/><circle cx="22.5" cy="34" r="5"/><circle cx="33.5" cy="34" r="5"/><circle cx="44.5" cy="34" r="5"/><circle cx="55.5" cy="34" r="5"/><circle cx="66.5" cy="34" r="5"/><circle cx="77.5" cy="34" r="5"/>
+      <circle cx="11.5" cy="42" r="5"/><circle cx="22.5" cy="42" r="5"/><circle cx="33.5" cy="42" r="5"/><circle cx="44.5" cy="42" r="5"/><circle cx="55.5" cy="42" r="5"/><circle cx="66.5" cy="42" r="5"/><circle cx="77.5" cy="42" r="5"/>
+      <circle cx="11.5" cy="50" r="5"/><circle cx="22.5" cy="50" r="5"/><circle cx="33.5" cy="50" r="5"/><circle cx="44.5" cy="50" r="5"/><circle cx="55.5" cy="50" r="5"/><circle cx="66.5" cy="50" r="5"/><circle cx="77.5" cy="50" r="5"/>
+      <circle cx="22.5" cy="58" r="5"/><circle cx="33.5" cy="58" r="5"/><circle cx="44.5" cy="58" r="5"/><circle cx="55.5" cy="58" r="5"/><circle cx="66.5" cy="58" r="5"/>
+      <circle cx="33.5" cy="66" r="5"/><circle cx="44.5" cy="66" r="5"/><circle cx="55.5" cy="66" r="5"/>
+      <circle cx="44.5" cy="74" r="5"/>
+    </g>
+    <!-- bright dot layer -->
+    <g fill="#ffbb22">
+      <!-- row 2 -->
+      <circle cx="22.5" cy="26" r="3.5"/><circle cx="33.5" cy="26" r="3.5"/><circle cx="55.5" cy="26" r="3.5"/><circle cx="66.5" cy="26" r="3.5"/>
+      <!-- row 3 -->
+      <circle cx="11.5" cy="34" r="3.5"/><circle cx="22.5" cy="34" r="3.5"/><circle cx="33.5" cy="34" r="3.5"/><circle cx="44.5" cy="34" r="3.5"/><circle cx="55.5" cy="34" r="3.5"/><circle cx="66.5" cy="34" r="3.5"/><circle cx="77.5" cy="34" r="3.5"/>
+      <!-- row 4 -->
+      <circle cx="11.5" cy="42" r="3.5"/><circle cx="22.5" cy="42" r="3.5"/><circle cx="33.5" cy="42" r="3.5"/><circle cx="44.5" cy="42" r="3.5"/><circle cx="55.5" cy="42" r="3.5"/><circle cx="66.5" cy="42" r="3.5"/><circle cx="77.5" cy="42" r="3.5"/>
+      <!-- row 5 -->
+      <circle cx="11.5" cy="50" r="3.5"/><circle cx="22.5" cy="50" r="3.5"/><circle cx="33.5" cy="50" r="3.5"/><circle cx="44.5" cy="50" r="3.5"/><circle cx="55.5" cy="50" r="3.5"/><circle cx="66.5" cy="50" r="3.5"/><circle cx="77.5" cy="50" r="3.5"/>
+      <!-- row 6 -->
+      <circle cx="22.5" cy="58" r="3.5"/><circle cx="33.5" cy="58" r="3.5"/><circle cx="44.5" cy="58" r="3.5"/><circle cx="55.5" cy="58" r="3.5"/><circle cx="66.5" cy="58" r="3.5"/>
+      <!-- row 7 -->
+      <circle cx="33.5" cy="66" r="3.5"/><circle cx="44.5" cy="66" r="3.5"/><circle cx="55.5" cy="66" r="3.5"/>
+      <!-- row 8 -->
+      <circle cx="44.5" cy="74" r="3.5"/>
+    </g>
+  </g>
+</svg>
