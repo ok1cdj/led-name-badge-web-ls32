@@ -92,16 +92,14 @@ export default function LEDPreview({ bitmap, cols }: LEDPreviewProps) {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-400">Preview</h2>
         <span className="text-xs text-zinc-500 font-mono">{cols} columns</span>
       </div>
-      <div className="overflow-x-auto">
-        <div className="flex justify-start">
-          <canvas
-            ref={canvasRef}
-            width={totalW}
-            height={totalH}
-            className="rounded-lg"
-            style={{ imageRendering: 'pixelated' }}
-          />
-        </div>
+      <div>
+        <canvas
+          ref={canvasRef}
+          width={totalW}
+          height={totalH}
+          className="rounded-lg max-w-full h-auto"
+          style={{ imageRendering: 'pixelated' }}
+        />
       </div>
     </div>
   );
