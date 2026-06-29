@@ -17,6 +17,8 @@ FreeCAD backup files
 # OwnCloud conflicts:
 *_conflict-*
 
+webapp/node_modules/
+
 # project specific ignores:
 # for pcb-pool production files
 /pcb-pool*
