@@ -77,9 +77,7 @@ export default function App() {
       <header className="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center">
-              <span className="text-amber-400 text-lg">⬛</span>
-            </div>
+            <img src="/icon.svg" alt="LED Badge" className="w-8 h-8" />
             <div>
               <h1 className="text-base font-bold text-white leading-tight">LED Badge Controller</h1>
               <p className="text-xs text-zinc-500">LS32 · Web HID</p>
